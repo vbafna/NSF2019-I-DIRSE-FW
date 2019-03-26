@@ -1,0 +1,62 @@
+\documentclass{NSF}
+\input{macros.tex}
+%% \usepackage{color}
+%% \graphicspath{{figures/}}
+
+\begin{document}
+
+% A. Cover Sheet
+% A number of the boxes contained on the Cover Sheet are
+% electronically pre-filled as part of the FastLane login process
+% Complete the rest of your info there
+
+% B. Project Summary
+\title{New algorithms for genome skimming and its applications}
+
+\definecolor{grey}{rgb}{0.5, 0.5, 0.5}
+\newcommand{\INST}[1]{{\color{grey} #1}}
+
+\newsection{B}
+\input{sections/summary}
+
+% C. Table of Contents 
+% A Table of Contents is automatically generated for the proposal by FastLane
+
+% D. Project Description
+\clearpage
+\newpage\newsection{D}
+\input{sections/description}
+
+% E. References Cited
+\newpage\newsection{E}
+\renewcommand\refname{References Cited}
+\bibliography{refs,smmendeley,siavashmendeley,shahab,vb}
+% I prefer to use the IEEE bibliography style. 
+% That's  NOT required by the NSF guidelines. 
+% Feel Free to use whatever style you prefer
+\bibliographystyle{ieeetr}
+%\bibliographystyle{IEEEtran}
+
+% F. Biographical Sketch(es)
+\newpage\newsection{F}
+%\renewcommand\refname{Biographical Sketches}
+\input{sections/bio}
+
+% G. Budget Justification
+\newpage\newsection{G}
+\input{sections/budget}
+
+%  H. Current and Pending Support
+\newpage\newsection{H}
+\input{sections/support}
+
+% I. Facilities, Equipment and Other Resources
+\newpage\newsection{I}
+\input{sections/resources}
+
+% J. Special Information and Supplementary Documentation
+\newpage\newsection{J}
+\input{sections/datasharing}		% Data Management Plan (Required)
+%\input{sections/postdoc} % Postdoctoral Researcher Mentoring Plan (if applicable)
+
+\end{document}
