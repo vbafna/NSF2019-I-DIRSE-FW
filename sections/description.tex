@@ -3,33 +3,34 @@
 Anthropogenic pressure and other natural causes have resulted in
 severe disruption of the global ecosystems in recent years, including
 climate change with extreme weather events, change (loss) of
-biodiversity, and invasion of non-native flora and fauna. The deforestation of
-rainforests and degradation of natural habitats is happening faster
-than efforts to study and understand the impact of these environmental
-insults.  Beyond undesired changes, recent years have also seen an increase in experimental genetics
-experiments that could radically change the
-population distribution in an environment. For example, the Target Malaria project
-is a \$75M effort using CRISPR gene drives to genetically modify, and
-eliminate mosquitoes (\emph{Anopheles}), and could be deployed in
-Africa within 2 years\cite{TargetMalaria}, but its impact on the local
-biogeography is completely unknown.  Similar gene drives are being
-organized to eliminate Avian malarial parasite carrying mosquitoes
-from Hawaii\cite{Liao2017}, and Rodents from New Zealand\cite{Owens2017}.  
+biodiversity, and invasion of non-native flora and fauna. The
+deforestation of rainforests and degradation of natural habitats is
+happening faster than efforts to study and understand the impact of
+these environmental insults.  Beyond undesired changes, recent years
+have also seen an increase in experimental genetics experiments that
+could radically change the population distribution in an
+environment. For example, the Target Malaria project is a \$75M effort
+using CRISPR gene drives to genetically modify, and eliminate
+mosquitoes (\emph{Anopheles}), and could be deployed in Africa within
+2 years\cite{TargetMalaria}, but its impact on the local biogeography
+is completely unknown.  Similar gene drives are being organized to
+eliminate Avian malarial parasite carrying mosquitoes from
+Hawaii\cite{Liao2017}, and Rodents from New Zealand\cite{Owens2017}.
 
-The ability
-to quickly and inexpensively sample the taxonomic diversity in an
-environment in real time is critical in this era of rapid climate and biodiversity
-changes, and for the ethical
-conduct of these directed evolution experiments in nature\cite{Oye2014}. Indeed, such methods are specifically important for organisms such as arthropods\cite{Beng2016} and small plants, which are among the most abundant and diverse
-non-microbial organisms on Earth but lack large-scale descriptions of
-biogeography and richness. However, large
+The ability to quickly and inexpensively sample the taxonomic
+diversity in an environment in real time is critical in this era of
+rapid climate and biodiversity changes, and for the ethical conduct of
+these directed evolution experiments in nature\cite{Oye2014}. Indeed,
+such methods are specifically important for organisms such as
+arthropods\cite{Beng2016} and small plants, which are among the most
+abundant and diverse non-microbial organisms on Earth but lack
+large-scale descriptions of biogeography and richness. However, large
 cataloging surveys remain sparse. At least some of this discrepancy
 can be attributed to the high cost of sorting and identifying samples
-from large sampling collections. 
+from large sampling collections.
 
 %With the advent of next generation sequencing methods, 
-The molecular
-technique of choice for measuring biodiversity is
+The molecular technique of choice for measuring biodiversity is
 (meta)barcoding\cite{Hebert2003,Savolainen2005,Taberlet2012}, which
 involves DNA sequencing of taxonomically informative and
 group-specific markers (e.g., mtDNA COI~\cite{Seifert2007,Hebert2003}
@@ -39,40 +40,47 @@ for fungi) that are variable enough for taxonomic identification, but
 have flanking regions that are sufficiently conserved to allow for PCR
 amplification using universal primers. Barcoding is used to
 taxonomically identify species or in the case of meta-barcoding to
-deconstruct the species composition of complex samples.  
-%Barcode markers have also been used  in phylogenetics\cite{Hedin2001,Taylor2017}.  
-Accurate
-barcoding crucially depends on the coverage of the reference database and the method used
-to search the  database~\cite{Taberlet2012}.
-Computational methods have been developed for finding the closest match in a reference
-dataset of markers (e.g., TaxI\cite{taxl}), and for placement of a
-query into existing marker trees\cite{epa,pplacer}. The reference databases for these studies consist of traditional barcode regions, such as COI in the Barcode of
-Life Data System\cite{BOLD}.  
+deconstruct the species composition of complex samples. Accurate
+barcoding crucially depends on the coverage of the reference database
+and the method used to search the database~\cite{Taberlet2012}.
+Computational methods have been developed for finding the closest
+match in a reference dataset of markers (e.g., TaxI\cite{taxl}), and
+for placement of a query into existing marker
+trees\cite{epa,pplacer}. The reference databases for these studies
+consist of traditional barcode regions, such as COI in the Barcode of
+Life Data System\cite{BOLD}.
 
-The traditional barcoding
-pipeline has several drawbacks.  PCR for marker gene amplification requires relatively high-quality DNA and thus cannot be applied to samples in which the DNA is heavily fragmented.  Moreover,
-since barcodes are short regions, their phylogenetic signal is limited\cite{Hickerson2006b}.  For
-example, 896 of the 4,174 species of wasps could not be
-distinguished from other species using COI barcodes\cite{Quicke2012}.
-While low costs have kept PCR-based pipelines attractive, falling
-costs of shotgun sequencing have now made it possible to shotgun
-sequence 1-2Gb of a reference specimen sample for 
-$\le\$50$, inclusive of sample preparation and labor costs.
-Therefore, researchers have proposed low-pass sequencing (\emph{genome-skimming}) as
-a viable approach to
-barcoding\cite{Coissac2016}. These approaches identify chloroplast/mtDNA marker genes in genomes by mapping to a reference library or \emph{de novo} assembly\cite{Liu2013}. 
-Large 
-databases (e.g., through PhyloAlps~\cite{PhyloAlps} and
- NorBol~\cite{NorBol} projects) are using genome-skimming to mine marker genes. 
-Our Danish collaborators ({\bf letter: Gilbert}) have developed a similar genome-skimming project, DNAmark~\cite{DNAmark}. However, they realized that {\em accurate} assembly of organelle and
-marker regions from genome-skims is non-trivial, and the approach discards the vast majority of the reads and is thus
-wasteful.  Therefore, they posed an interesting methodological
-question: \emph{can the unassembled data be used ``as-is'' for barcoding, saving on the labor-intensive task of mtDNA assembly and using all available genomic information?}
+The traditional barcoding pipeline has several drawbacks.  PCR for
+marker gene amplification requires relatively high-quality DNA and
+thus cannot be applied to samples in which the DNA is heavily
+fragmented.  Moreover, since barcodes are short regions, their
+phylogenetic signal is limited\cite{Hickerson2006b}.  For example, 896
+of the 4,174 species of wasps could not be distinguished from other
+species using COI barcodes\cite{Quicke2012}.  While low costs have
+kept PCR-based pipelines attractive, falling costs of shotgun
+sequencing have now made it possible to shotgun sequence 1-2Gb of a
+reference specimen sample for $\le\$50$, inclusive of sample
+preparation and labor costs.  Therefore, researchers have proposed
+low-pass sequencing (\emph{genome-skimming}) as a viable approach to
+barcoding\cite{Coissac2016}. These approaches identify
+chloroplast/mtDNA marker genes in genomes by mapping to a reference
+library or \emph{de novo} assembly\cite{Liu2013}.  Large databases
+(e.g., through PhyloAlps~\cite{PhyloAlps} and NorBol~\cite{NorBol}
+projects) are using genome-skimming to mine marker genes.  Our Danish
+collaborators ({\bf letter: Gilbert}) have developed a similar
+genome-skimming project, DNAmark~\cite{DNAmark}. However, they
+realized that {\em accurate} assembly of organelle and marker regions
+from genome-skims is non-trivial, and the approach discards the vast
+majority of the reads and is thus wasteful.  Therefore, they posed an
+interesting methodological question: \emph{can the unassembled data be
+  used ``as-is'' for barcoding, saving on the labor-intensive task of
+  mtDNA assembly and using all available genomic information?}
 
-Motivated by this question, we consider the alternative approach where low coverage genome-skims are used both to create the reference library and the query dataset.
-%Here, we treat genome-skims simply as low-coverage ``bags of reads'',both for the orphan \emph{query}, and for a \emph{library} of(non-assembled) \emph{reference} genome-skims obtained for a collection of known species. 
-We propose the development of computational and statistical tools to address the
-following key questions (Figure~\ref{fig:overview}):
+Motivated by this question, we consider the alternative approach where
+low coverage genome-skims are used both to create the reference
+library and the query dataset. We propose the development of
+computational and statistical tools to address the following key
+questions (Figure~\ref{fig:overview}):
 \begin{packed_desc}
 %[label={\bf A\arabic*}:]
 \item [Aim 1:] 
@@ -146,38 +154,39 @@ several approaches can be considered.
 For genome-skims in the reference library,
 we can simply search a database using tools like BLAST~\cite{blast}, USearch\cite{usearch}, or Bowtie~\cite{Langmead2012a}, or faster k-mer based methods like Kraken~\cite{Kraken}  to find and eliminate bacterial or fungal contamination.
 Note that the cost of preprocessing will be amortized over many searches.
-%Reads with significant hits to species other than the taxonomic group of interest can be simply eliminated from the
-%reference library.
 
-For query sequences, even a fast classification tool like Kraken run on all reads \textit{may} prove too slow.
-But note that we don't need identities of contaminants.
- \emph{Given a query genome-skim, and a large `contaminant database' of genome skims from prokaryotes and fungi, we will develop super-fast algorithms for filtering contamination}.
-We will test membership queries using Bloom filters representing the union of k-mers in all contaminant sequences. Consider a bit-vector $B$ of size $m$, where each of $n$ k-mers from a contaminant set is hashed using $h$ bits. Then, the probability of a non-contaminant k-mer being hashed to $B$ by chance, $p \le (1-e^{-\frac{hn}{m}})^h$. We will denote a read as a contaminant if a fraction $\theta$ of its k-mers are hashed to $B$. For small $p$, the probability of mis-classifying a read as a contaminant is bounded using Chernoff's bound to be $\le\text{exp}(-\ell(\theta-p)^2)$.
- Adjusting $\theta$, we 
- can also detect contamination from species
- {\em close to} but not identical to those
- in our database. 
-Thus, Bloom filter may provide a super-fast way of eliminating all contaminant reads.
+For query sequences, even a fast classification tool like Kraken run
+on all reads \textit{may} prove too slow.  But note that we don't need
+identities of contaminants.  \emph{Given a query genome-skim, and a
+  large `contaminant database' of genome skims from prokaryotes and
+  fungi, we will develop super-fast algorithms for filtering
+  contamination}.  We will test membership queries using Bloom filters
+representing the union of k-mers in all contaminant
+sequences. Consider a bit-vector $B$ of size $m$, where each of $n$
+k-mers from a contaminant set is hashed using $h$ bits. Then, the
+probability of a non-contaminant k-mer being hashed to $B$ by chance,
+$p \le (1-e^{-\frac{hn}{m}})^h$. We will denote a read as a
+contaminant if a fraction $\theta$ of its k-mers are hashed to
+$B$. For small $p$, the probability of mis-classifying a read as a
+contaminant is bounded using Chernoff's bound to be
+$\le\text{exp}(-\ell(\theta-p)^2)$.  Adjusting $\theta$, we can also
+detect contamination from species {\em close to} but not identical to
+those in our database.  Thus, Bloom filter may provide a super-fast
+way of eliminating all contaminant reads.
 
-For even higher speeds, {\em we will develop algorithmic strategies to compute the true distance  without eliminating contaminants}. 
-For a query genome-skim with a mix
-of $k$-mers from the real species  ($A$)
-and those from contaminants ($C$), and reference skim $B$,
-let $J'$ be the Jaccard computed
-without filtering.
-We can estimate the fraction of contamination $w=\frac{|A|}{|A\cup C|}\approx\frac{|A|}{|A|+|C|}$
-% We will compute the Jaccard 
-% index between a genome-skim of a pure 
-% reference species and a mix of $w$\% reads from a 
-% main query species and $(100-w)$\% reads from several contaminant species.
-by running Kraken or
-the Bloom filter  on a small subset of reads.
-We expect contaminants to have very low similarity to the main query species (e.g., fungal DNA in an insect query). Thus, 
-their contribution to the shared $k$-mer set is negligible (i.e.,
-$|A\cap C|\approx |B\cap C|\approx 0$). 
-Note also that $|A\cup B \cup C|$ and $|A\cup C|$ can be easily computed using JellyFish.
-Then, we can derive
-the corrected $J$:
+For even higher speeds, {\em we will develop algorithmic strategies to
+  compute the true distance without eliminating contaminants}.  For a
+query genome-skim with a mix of $k$-mers from the real species ($A$)
+and those from contaminants ($C$), and reference skim $B$, let $J'$ be
+the Jaccard computed without filtering.  We can estimate the fraction
+of contamination $w=\frac{|A|}{|A\cup C|}\approx\frac{|A|}{|A|+|C|}$
+by running Kraken or the Bloom filter on a small subset of reads.  We
+expect contaminants to have very low similarity to the main query
+species (e.g., fungal DNA in an insect query). Thus, their
+contribution to the shared $k$-mer set is negligible (i.e., $|A\cap
+C|\approx |B\cap C|\approx 0$).  Note also that $|A\cup B \cup C|$ and
+$|A\cup C|$ can be easily computed using JellyFish.  Then, we can
+derive the corrected $J$:
 \vspace{-6pt}
 \begin{small}
 $$J=\frac{|A\cap B|}{|A\cup B|}=\frac{|A\cap B|/{|A\cup B \cup C|}}{|A\cup B|/|A\cup B \cup C|}=\frac{J'}{1-\frac{|C|}{|A\cup B \cup C|}}=\frac{J'}{1-(1-w)\frac{|A\cup C|}{|A\cup B \cup C|}}\; .
@@ -185,16 +194,10 @@ $$J=\frac{|A\cap B|}{|A\cup B|}=\frac{|A\cap B|/{|A\cup B \cup C|}}{|A\cup B|/|A
 $$
 \end{small}
 Thus, we can use Equation~\ref{eqn:distance_estimate_penalized} with
-this contamination-corrected estimate of $J$.
-%\end{enumerate*}
-This way of handling contamination 
-is essentially a simpler case of meta-barcoding (Aim 3)
-because we  assume {\em a priori} that contaminants
-are distant from the main query species
-and do not seek their identity. 
-
-%\paragraph{A1.4 Testing on real data.}
-
+this contamination-corrected estimate of $J$.  This way of handling
+contamination is essentially a simpler case of meta-barcoding (Aim 3)
+because we assume {\em a priori} that contaminants are distant from
+the main query species and do not seek their identity.
 
 \vspace{-5pt}
 \section{Intellectual merit}
